@@ -55,10 +55,23 @@
                         }
 
                         Console.WriteLine(3); break;
-                    case "4": Console.WriteLine(4); break;
+                    case "4":
+                        Console.Clear();
+                        sorszam = 0;
+                        foreach (string nev in list)
+                        {
+                            if(nev.Length<9)
+                               Console.WriteLine($"{sorszam++}. {nev}");
+                        }
+                        break;
+
+
+
+
                     case "5":
                         Console.Clear();
                         sorszam = 0;
+
                         foreach (string nev in list)
                         {
                             bool jo = true;
