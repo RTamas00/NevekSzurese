@@ -45,7 +45,16 @@
                                Console.WriteLine($"{sorszam++}. {nev}");                           
                         }
                         break;
-                    case "3": Console.WriteLine(3); break;
+                    case "3":
+                        sorszam = 0;
+                        Console.Clear();
+                        foreach (string nev in list)
+                        {
+                            if(Char.IsUpper(nev[0]))
+                               Console.WriteLine($"{sorszam++}. {nev}");
+                        }
+
+                        Console.WriteLine(3); break;
                     case "4": Console.WriteLine(4); break;
                     case "5": Console.WriteLine(5); break;
                     default: Console.WriteLine("Rossz parancs!");break;
